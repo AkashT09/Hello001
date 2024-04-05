@@ -1,0 +1,800 @@
+bkpc@ubuntru22:~$ ls
+Desktop  dir1  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+cbkpc@ubuntru22:~$ pwd
+/home/cbkpc
+cbkpc@ubuntru22:~$ cd ..
+cbkpc@ubuntru22:/home$ pwd
+/home
+cbkpc@ubuntru22:/home$ ls
+cbkpc
+cbkpc@ubuntru22:/home$ cd cbkpc
+cbkpc@ubuntru22:~$ ls
+Desktop  dir1  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+cbkpc@ubuntru22:~$ cd /
+cbkpc@ubuntru22:/$ pwd
+/
+cbkpc@ubuntru22:/$ ls
+bin   cdrom  etc   lib    lib64   lost+found  mnt  proc  run   snap  swapfile  tmp  var
+boot  dev    home  lib32  libx32  media       opt  root  sbin  srv   sys       usr
+cbkpc@ubuntru22:/$ pwd
+/
+cbkpc@ubuntru22:/$ cd ~
+cbkpc@ubuntru22:~$ pwd
+/home/cbkpc
+cbkpc@ubuntru22:~$ ls
+Desktop  dir1  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+cbkpc@ubuntru22:~$ cd dir1
+cbkpc@ubuntru22:~/dir1$ ls
+demo.txt  f2  f3.txt  Ramfile.txt  s1.txt  s2.txt  uniqnames.txt
+cbkpc@ubuntru22:~/dir1$ ls -l
+total 24
+-rw-rw-r-- 1 cbkpc cbkpc  35 Feb  8 11:27 demo.txt
+-rw-rw---- 1 cbkpc cbkpc 173 Feb  8 11:31 f2
+-rw-rw-r-- 1 cbkpc cbkpc 118 Feb  8 11:43 f3.txt
+-rw-rw-r-- 1 cbkpc cbkpc  12 Feb  8 11:34 Ramfile.txt
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  8 12:59 s1.txt
+-rw-rw-r-- 1 cbkpc cbkpc  13 Feb  8 13:00 s2.txt
+-rw-rw-r-- 1 cbkpc cbkpc  67 Feb  8 11:32 uniqnames.txt
+cbkpc@ubuntru22:~/dir1$ ls -a
+.  ..  demo.txt  f2  f3.txt  Ramfile.txt  s1.txt  s2.txt  uniqnames.txt
+cbkpc@ubuntru22:~/dir1$ ls -f
+Ramfile.txt  s2.txt  f2  demo.txt  .  uniqnames.txt  s1.txt  ..  f3.txt
+cbkpc@ubuntru22:~/dir1$ cd ..
+cbkpc@ubuntru22:~$ mkdir d1
+cbkpc@ubuntru22:~$ ls -l
+total 44
+drwxrwxr-x 2 cbkpc cbkpc 4096 Feb  9 11:17 d1
+drwxr-xr-x 2 cbkpc cbkpc 4096 Feb  6 11:11 Desktop
+drwxrwxr-x 2 cbkpc cbkpc 4096 Feb  8 12:57 dir1
+drwxr-xr-x 2 cbkpc cbkpc 4096 Feb  2 12:15 Documents
+drwxr-xr-x 2 cbkpc cbkpc 4096 Feb  2 12:15 Downloads
+drwxr-xr-x 2 cbkpc cbkpc 4096 Feb  2 12:15 Music
+drwxr-xr-x 2 cbkpc cbkpc 4096 Feb  2 12:15 Pictures
+drwxr-xr-x 2 cbkpc cbkpc 4096 Feb  2 12:15 Public
+drwx------ 4 cbkpc cbkpc 4096 Feb  2 13:54 snap
+drwxr-xr-x 2 cbkpc cbkpc 4096 Feb  2 12:15 Templates
+drwxr-xr-x 2 cbkpc cbkpc 4096 Feb  2 12:15 Videos
+cbkpc@ubuntru22:~$ cd d1
+cbkpc@ubuntru22:~/d1$ cd ..
+cbkpc@ubuntru22:~$ ls
+d1  Desktop  dir1  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+cbkpc@ubuntru22:~$ rmdir d1
+cbkpc@ubuntru22:~$ ls
+Desktop  dir1  Documents  Downloads  Music  Pictures  Public  snap  Templates  Videos
+cbkpc@ubuntru22:~$ man ls
+cbkpc@ubuntru22:~$ mkdir d1
+cbkpc@ubuntru22:~$ cd d1
+cbkpc@ubuntru22:~/d1$ touch f1 f2 f3 f4 f5
+cbkpc@ubuntru22:~/d1$ cat > f6
+hi
+how 
+are you?
+welcome ti Linux commands
+^Z
+[1]+  Stopped                 cat > f6
+cbkpc@ubuntru22:~/d1$ cat f6
+hi
+how 
+are you?
+welcome ti Linux commands
+cbkpc@ubuntru22:~/d1$ cat > f7
+hello
+i am fine
+^Z
+[2]+  Stopped                 cat > f7
+cbkpc@ubuntru22:~/d1$ cat f6
+hi
+how 
+are you?
+welcome ti Linux commands
+cbkpc@ubuntru22:~/d1$ cat f7
+hello
+i am fine
+cbkpc@ubuntru22:~/d1$ cat f6 f7
+hi
+how 
+are you?
+welcome ti Linux commands
+hello
+i am fine
+cbkpc@ubuntru22:~/d1$ cp f7 f1
+cbkpc@ubuntru22:~/d1$ cat f1
+hello
+i am fine
+cbkpc@ubuntru22:~/d1$ mv f1 file1.txt
+cbkpc@ubuntru22:~/d1$ ls
+f2  f3  f4  f5  f6  f7  file1.txt
+cbkpc@ubuntru22:~/d1$ cat file1.txt
+hello
+i am fine
+cbkpc@ubuntru22:~/d1$ rm f2
+cbkpc@ubuntru22:~/d1$ ls
+f3  f4  f5  f6  f7  file1.txt
+cbkpc@ubuntru22:~/d1$ touch s1 s2 s3 s4
+cbkpc@ubuntru22:~/d1$ ls
+f3  f4  f5  f6  f7  file1.txt  s1  s2  s3  s4
+cbkpc@ubuntru22:~/d1$ rm s*
+cbkpc@ubuntru22:~/d1$ ls
+f3  f4  f5  f6  f7  file1.txt
+cbkpc@ubuntru22:~/d1$ cat f6
+hi
+how 
+are you?
+welcome to Linux commands
+cbkpc@ubuntru22:~/d1$ head -2 f6
+hi
+how 
+cbkpc@ubuntru22:~/d1$ tail -3 f6
+how 
+are you?
+welcome to Linux commands
+cbkpc@ubuntru22:~/d1$ wc f3
+0 0 0 f3
+cbkpc@ubuntru22:~/d1$ wc f6
+ 4  8 43 f6
+cbkpc@ubuntru22:~/d1$ wc -l f3
+0 f3
+cbkpc@ubuntru22:~/d1$ wc -l f6
+4 f6
+cbkpc@ubuntru22:~/d1$ wc -w f6
+8 f6
+cbkpc@ubuntru22:~/d1$ wc -c f6
+43 f6
+cbkpc@ubuntru22:~/d1$ ls
+f3  f4  f5  f6  f7  file1.txt
+cbkpc@ubuntru22:~/d1$ ls l
+ls: cannot access 'l': No such file or directory
+cbkpc@ubuntru22:~/d1$ ls -l
+total 12
+-rw-rw-r-- 1 cbkpc cbkpc  0 Feb  9 11:19 f3
+-rw-rw-r-- 1 cbkpc cbkpc  0 Feb  9 11:19 f4
+-rw-rw-r-- 1 cbkpc cbkpc  0 Feb  9 11:19 f5
+-rw-rw-r-- 1 cbkpc cbkpc 43 Feb  9 11:21 f6
+-rw-rw-r-- 1 cbkpc cbkpc 16 Feb  9 11:20 f7
+-rw-rw-r-- 1 cbkpc cbkpc 16 Feb  9 11:21 file1.txt
+cbkpc@ubuntru22:~/d1$ ls -l > f8
+cbkpc@ubuntru22:~/d1$ cat f8
+total 12
+-rw-rw-r-- 1 cbkpc cbkpc  0 Feb  9 11:19 f3
+-rw-rw-r-- 1 cbkpc cbkpc  0 Feb  9 11:19 f4
+-rw-rw-r-- 1 cbkpc cbkpc  0 Feb  9 11:19 f5
+-rw-rw-r-- 1 cbkpc cbkpc 43 Feb  9 11:21 f6
+-rw-rw-r-- 1 cbkpc cbkpc 16 Feb  9 11:20 f7
+-rw-rw-r-- 1 cbkpc cbkpc  0 Feb  9 11:25 f8
+-rw-rw-r-- 1 cbkpc cbkpc 16 Feb  9 11:21 file1.txt
+cbkpc@ubuntru22:~/d1$ ls -l | wc
+      8      65     331
+cbkpc@ubuntru22:~/d1$ cat >sample
+Chinmay
+Akshata
+Dinesh
+Aporva
+Prathmesh
+Bhakti
+Girija
+^Z
+[3]+  Stopped                 cat > sample
+cbkpc@ubuntru22:~/d1$ cat sample
+Chinmay
+Akshata
+Dinesh
+Aporva
+Prathmesh
+Bhakti
+Girija
+cbkpc@ubuntru22:~/d1$ sort sample
+Akshata
+Aporva
+Bhakti
+Chinmay
+Dinesh
+Girija
+Prathmesh
+cbkpc@ubuntru22:~/d1$ sort -r sample
+Prathmesh
+Girija
+Dinesh
+Chinmay
+Bhakti
+Aporva
+Akshata
+cbkpc@ubuntru22:~/d1$ sort  sample
+Akshata ec 4 
+Aporva cs 6
+Bhakti me 2
+Chinmay cs 1
+Dinesh me 2 
+Girija ar 4
+Prathmesh ec 3
+cbkpc@ubuntru22:~/d1$ sort -r sample
+Prathmesh ec 3
+Girija ar 4
+Dinesh me 2 
+Chinmay cs 1
+Bhakti me 2
+Aporva cs 6
+Akshata ec 4 
+cbkpc@ubuntru22:~/d1$ cp sample sample1
+cbkpc@ubuntru22:~/d1$ cat sample1
+Chinmay
+Akshata
+Dinesh 
+Aporva
+Prathmesh
+Bhakti
+Girija
+Chinmay
+Akshata
+Dinesh 
+Aporva
+Prathmesh
+Bhakti
+Girija
+Chinmay
+Akshata
+Dinesh 
+Aporva
+Prathmesh
+Bhakti
+Girija
+Chinmay
+Akshata
+Dinesh 
+Aporva
+Prathmesh
+Bhakti
+Girija
+cbkpc@ubuntru22:~/d1$ uniq sample1
+Chinmay
+Akshata
+Dinesh 
+Aporva
+Prathmesh
+Bhakti
+Girija
+Chinmay
+Akshata
+Dinesh 
+Aporva
+Prathmesh
+Bhakti
+Girija
+Chinmay
+Akshata
+Dinesh 
+Aporva
+Prathmesh
+Bhakti
+Girija
+Chinmay
+Akshata
+Dinesh 
+Aporva
+Prathmesh
+Bhakti
+Girija
+cbkpc@ubuntru22:~/d1$ sort sample1
+Akshata
+Akshata
+Akshata
+Akshata
+Aporva
+Aporva
+Aporva
+Aporva
+Bhakti
+Bhakti
+Bhakti
+Bhakti
+Chinmay
+Chinmay
+Chinmay
+Chinmay
+Dinesh 
+Dinesh 
+Dinesh 
+Dinesh 
+Girija
+Girija
+Girija
+Girija
+Prathmesh
+Prathmesh
+Prathmesh
+Prathmesh
+cbkpc@ubuntru22:~/d1$ sort sample1 | uniq
+Akshata
+Aporva
+Bhakti
+Chinmay
+Dinesh 
+Girija
+Prathmesh
+cbkpc@ubuntru22:~/d1$ sort sample1 | uniq >uniqnames
+cbkpc@ubuntru22:~/d1$ ls -l
+total 28
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f3
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f4
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f5
+-rw-rw-r-- 1 cbkpc cbkpc  43 Feb  9 11:21 f6
+-rw-rw-r-- 1 cbkpc cbkpc  16 Feb  9 11:20 f7
+-rw-rw-r-- 1 cbkpc cbkpc 324 Feb  9 11:25 f8
+-rw-rw-r-- 1 cbkpc cbkpc  16 Feb  9 11:21 file1.txt
+-rw-rw-r-- 1 cbkpc cbkpc  91 Feb  9 11:29 sample
+-rw-rw-r-- 1 cbkpc cbkpc 220 Feb  9 11:31 sample1
+-rw-rw-r-- 1 cbkpc cbkpc  55 Feb  9 11:32 uniqnames
+cbkpc@ubuntru22:~/d1$ chmod ugo-rwx file1.txt
+cbkpc@ubuntru22:~/d1$ ls -l
+total 28
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f3
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f4
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f5
+-rw-rw-r-- 1 cbkpc cbkpc  43 Feb  9 11:21 f6
+-rw-rw-r-- 1 cbkpc cbkpc  16 Feb  9 11:20 f7
+-rw-rw-r-- 1 cbkpc cbkpc 324 Feb  9 11:25 f8
+---------- 1 cbkpc cbkpc  16 Feb  9 11:21 file1.txt
+-rw-rw-r-- 1 cbkpc cbkpc  91 Feb  9 11:29 sample
+-rw-rw-r-- 1 cbkpc cbkpc 220 Feb  9 11:31 sample1
+-rw-rw-r-- 1 cbkpc cbkpc  55 Feb  9 11:32 uniqnames
+cbkpc@ubuntru22:~/d1$ chmod ugo+rwx file1.txt
+cbkpc@ubuntru22:~/d1$ ls -l
+total 28
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f3
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f4
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f5
+-rw-rw-r-- 1 cbkpc cbkpc  43 Feb  9 11:21 f6
+-rw-rw-r-- 1 cbkpc cbkpc  16 Feb  9 11:20 f7
+-rw-rw-r-- 1 cbkpc cbkpc 324 Feb  9 11:25 f8
+-rwxrwxrwx 1 cbkpc cbkpc  16 Feb  9 11:21 file1.txt
+-rw-rw-r-- 1 cbkpc cbkpc  91 Feb  9 11:29 sample
+-rw-rw-r-- 1 cbkpc cbkpc 220 Feb  9 11:31 sample1
+-rw-rw-r-- 1 cbkpc cbkpc  55 Feb  9 11:32 uniqnames
+cbkpc@ubuntru22:~/d1$ chmod 777 f3
+cbkpc@ubuntru22:~/d1$ ls -l
+total 28
+-rwxrwxrwx 1 cbkpc cbkpc   0 Feb  9 11:19 f3
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f4
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f5
+-rw-rw-r-- 1 cbkpc cbkpc  43 Feb  9 11:21 f6
+-rw-rw-r-- 1 cbkpc cbkpc  16 Feb  9 11:20 f7
+-rw-rw-r-- 1 cbkpc cbkpc 324 Feb  9 11:25 f8
+-rwxrwxrwx 1 cbkpc cbkpc  16 Feb  9 11:21 file1.txt
+-rw-rw-r-- 1 cbkpc cbkpc  91 Feb  9 11:29 sample
+-rw-rw-r-- 1 cbkpc cbkpc 220 Feb  9 11:31 sample1
+-rw-rw-r-- 1 cbkpc cbkpc  55 Feb  9 11:32 uniqnames
+cbkpc@ubuntru22:~/d1$ chmod 444 f4
+cbkpc@ubuntru22:~/d1$ ls -l
+total 28
+-rwxrwxrwx 1 cbkpc cbkpc   0 Feb  9 11:19 f3
+-r--r--r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f4
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f5
+-rw-rw-r-- 1 cbkpc cbkpc  43 Feb  9 11:21 f6
+-rw-rw-r-- 1 cbkpc cbkpc  16 Feb  9 11:20 f7
+-rw-rw-r-- 1 cbkpc cbkpc 324 Feb  9 11:25 f8
+-rwxrwxrwx 1 cbkpc cbkpc  16 Feb  9 11:21 file1.txt
+-rw-rw-r-- 1 cbkpc cbkpc  91 Feb  9 11:29 sample
+-rw-rw-r-- 1 cbkpc cbkpc 220 Feb  9 11:31 sample1
+-rw-rw-r-- 1 cbkpc cbkpc  55 Feb  9 11:32 uniqnames
+cbkpc@ubuntru22:~/d1$ umask
+0002
+cbkpc@ubuntru22:~/d1$ tocuh s1
+Command 'tocuh' not found, did you mean:
+  command 'touch' from deb coreutils (8.32-4.1ubuntu1)
+Try: apt install <deb name>
+cbkpc@ubuntru22:~/d1$ touch s1
+cbkpc@ubuntru22:~/d1$ ls -l
+total 28
+-rwxrwxrwx 1 cbkpc cbkpc   0 Feb  9 11:19 f3
+-r--r--r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f4
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f5
+-rw-rw-r-- 1 cbkpc cbkpc  43 Feb  9 11:21 f6
+-rw-rw-r-- 1 cbkpc cbkpc  16 Feb  9 11:20 f7
+-rw-rw-r-- 1 cbkpc cbkpc 324 Feb  9 11:25 f8
+-rwxrwxrwx 1 cbkpc cbkpc  16 Feb  9 11:21 file1.txt
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:36 s1
+-rw-rw-r-- 1 cbkpc cbkpc  91 Feb  9 11:29 sample
+-rw-rw-r-- 1 cbkpc cbkpc 220 Feb  9 11:31 sample1
+-rw-rw-r-- 1 cbkpc cbkpc  55 Feb  9 11:32 uniqnames
+cbkpc@ubuntru22:~/d1$ touch s2
+cbkpc@ubuntru22:~/d1$ ls -l
+total 28
+-rwxrwxrwx 1 cbkpc cbkpc   0 Feb  9 11:19 f3
+-r--r--r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f4
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f5
+-rw-rw-r-- 1 cbkpc cbkpc  43 Feb  9 11:21 f6
+-rw-rw-r-- 1 cbkpc cbkpc  16 Feb  9 11:20 f7
+-rw-rw-r-- 1 cbkpc cbkpc 324 Feb  9 11:25 f8
+-rwxrwxrwx 1 cbkpc cbkpc  16 Feb  9 11:21 file1.txt
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:36 s1
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:36 s2
+-rw-rw-r-- 1 cbkpc cbkpc  91 Feb  9 11:29 sample
+-rw-rw-r-- 1 cbkpc cbkpc 220 Feb  9 11:31 sample1
+-rw-rw-r-- 1 cbkpc cbkpc  55 Feb  9 11:32 uniqnames
+cbkpc@ubuntru22:~/d1$ umask 0006
+cbkpc@ubuntru22:~/d1$ touch s3
+cbkpc@ubuntru22:~/d1$ ls -l
+total 28
+-rwxrwxrwx 1 cbkpc cbkpc   0 Feb  9 11:19 f3
+-r--r--r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f4
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f5
+-rw-rw-r-- 1 cbkpc cbkpc  43 Feb  9 11:21 f6
+-rw-rw-r-- 1 cbkpc cbkpc  16 Feb  9 11:20 f7
+-rw-rw-r-- 1 cbkpc cbkpc 324 Feb  9 11:25 f8
+-rwxrwxrwx 1 cbkpc cbkpc  16 Feb  9 11:21 file1.txt
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:36 s1
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:36 s2
+-rw-rw---- 1 cbkpc cbkpc   0 Feb  9 11:37 s3
+-rw-rw-r-- 1 cbkpc cbkpc  91 Feb  9 11:29 sample
+-rw-rw-r-- 1 cbkpc cbkpc 220 Feb  9 11:31 sample1
+-rw-rw-r-- 1 cbkpc cbkpc  55 Feb  9 11:32 uniqnames
+cbkpc@ubuntru22:~/d1$ umask 0004
+cbkpc@ubuntru22:~/d1$ touch s4
+cbkpc@ubuntru22:~/d1$ ls -l
+total 28
+-rwxrwxrwx 1 cbkpc cbkpc   0 Feb  9 11:19 f3
+-r--r--r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f4
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:19 f5
+-rw-rw-r-- 1 cbkpc cbkpc  43 Feb  9 11:21 f6
+-rw-rw-r-- 1 cbkpc cbkpc  16 Feb  9 11:20 f7
+-rw-rw-r-- 1 cbkpc cbkpc 324 Feb  9 11:25 f8
+-rwxrwxrwx 1 cbkpc cbkpc  16 Feb  9 11:21 file1.txt
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:36 s1
+-rw-rw-r-- 1 cbkpc cbkpc   0 Feb  9 11:36 s2
+-rw-rw---- 1 cbkpc cbkpc   0 Feb  9 11:37 s3
+-rw-rw--w- 1 cbkpc cbkpc   0 Feb  9 11:37 s4
+-rw-rw-r-- 1 cbkpc cbkpc  91 Feb  9 11:29 sample
+-rw-rw-r-- 1 cbkpc cbkpc 220 Feb  9 11:31 sample1
+-rw-rw-r-- 1 cbkpc cbkpc  55 Feb  9 11:32 uniqnames
+cbkpc@ubuntru22:~/d1$ umask 0002
+cbkpc@ubuntru22:~/d1$ cat >demo.txt
+a
+b
+c
+^Z
+[4]+  Stopped                 cat > demo.txt
+cbkpc@ubuntru22:~/d1$ cat >demo1.txt
+a       
+b
+d
+^Z
+[5]+  Stopped                 cat > demo1.txt
+cbkpc@ubuntru22:~/d1$ cmp demo.txt demo1.txt
+demo.txt demo1.txt differ: byte 5, line 3
+cbkpc@ubuntru22:~/d1$ diff demo.txt demo1.txt
+3c3
+< c
+---
+> d
+cbkpc@ubuntru22:~/d1$ comm demo.txt demo1.txt
+		a
+		b
+c
+	d
+cbkpc@ubuntru22:~/d1$ cat f6
+hi
+how 
+are you?
+welcome to Linux commands
+cbkpc@ubuntru22:~/d1$ cat sample
+Chinmay cs 1
+Akshata ec 4 
+Dinesh me 2 
+Aporva cs 6
+Prathmesh ec 3
+Bhakti me 2
+Girija ar 4
+cbkpc@ubuntru22:~/d1$ cut -c 4-7 sample
+nmay
+hata
+esh 
+rva 
+thme
+kti 
+ija 
+cbkpc@ubuntru22:~/d1$ paste demo.txt demo1.txt
+a	a
+b	b
+c	d
+cbkpc@ubuntru22:~/d1$ paste demo.txt demo1.txt > demo3.txt
+cbkpc@ubuntru22:~/d1$ cat demo3.txt
+a	a
+b	b
+c	d
+cbkpc@ubuntru22:~/d1$ cat sample1.txt
+cat: sample1.txt: No such file or directory
+cbkpc@ubuntru22:~/d1$ cat sample1
+Chinmay
+Akshata
+Dinesh 
+Aporva
+Prathmesh
+Bhakti
+Girija
+Chinmay
+Akshata
+Dinesh 
+Aporva
+Prathmesh
+Bhakti
+Girija
+Chinmay
+Akshata
+Dinesh 
+Aporva
+Prathmesh
+Bhakti
+Girija
+Chinmay
+Akshata
+Dinesh 
+Aporva
+Prathmesh
+Bhakti
+Girija
+cbkpc@ubuntru22:~/d1$ tr '[a-z]' '[A-Z]' sample1
+tr: extra operand ‘sample1’
+Try 'tr --help' for more information.
+cbkpc@ubuntru22:~/d1$ tr '[a-z]' '[A-Z]' <sample1
+CHINMAY
+AKSHATA
+DINESH 
+APORVA
+PRATHMESH
+BHAKTI
+GIRIJA
+CHINMAY
+AKSHATA
+DINESH 
+APORVA
+PRATHMESH
+BHAKTI
+GIRIJA
+CHINMAY
+AKSHATA
+DINESH 
+APORVA
+PRATHMESH
+BHAKTI
+GIRIJA
+CHINMAY
+AKSHATA
+DINESH 
+APORVA
+PRATHMESH
+BHAKTI
+GIRIJA
+cbkpc@ubuntru22:~/d1$ tr '[a-z]' '[*]' <sample1
+C]]]]*]
+A]]]*]*
+D]]]]] 
+A]]]]*
+P]*]]]]]]
+B]*]]]
+G]]]]*
+C]]]]*]
+A]]]*]*
+D]]]]] 
+A]]]]*
+P]*]]]]]]
+B]*]]]
+G]]]]*
+C]]]]*]
+A]]]*]*
+D]]]]] 
+A]]]]*
+P]*]]]]]]
+B]*]]]
+G]]]]*
+C]]]]*]
+A]]]*]*
+D]]]]] 
+A]]]]*
+P]*]]]]]]
+B]*]]]
+G]]]]*
+cbkpc@ubuntru22:~/d1$ tr '[a-z]' '[*-*]' <sample1
+C]]]]*]
+A]]]*]*
+D]]]]] 
+A]]]]*
+P]*]]]]]]
+B]*]]]
+G]]]]*
+C]]]]*]
+A]]]*]*
+D]]]]] 
+A]]]]*
+P]*]]]]]]
+B]*]]]
+G]]]]*
+C]]]]*]
+A]]]*]*
+D]]]]] 
+A]]]]*
+P]*]]]]]]
+B]*]]]
+G]]]]*
+C]]]]*]
+A]]]*]*
+D]]]]] 
+A]]]]*
+P]*]]]]]]
+B]*]]]
+G]]]]*
+cbkpc@ubuntru22:~/d1$ cat f6
+hi
+how 
+are you?
+welcome to Linux commands
+cbkpc@ubuntru22:~/d1$ pr f6
+
+
+2024-02-09 11:21                        f6                        Page 1
+
+
+hi
+how 
+are you?
+welcome to Linux commands
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cbkpc@ubuntru22:~/d1$ pr -n f6
+
+
+2024-02-09 11:21                        f6                        Page 1
+
+
+    1	hi
+    2	how 
+    3	are you?
+    4	welcome to Linux commands
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cbkpc@ubuntru22:~/d1$ cat sample1
+Chinmay
+Akshata
+Dinesh 
+Aporva
+Prathmesh
+Bhakti
+Girija
+Chinmay
+Akshata
+Dinesh 
+Aporva
+Prathmesh
+Bhakti
+Girija
+Chinmay
+Akshata
+Dinesh 
+Aporva
+Prathmesh
+Bhakti
+Girija
+Chinmay
+Akshata
+Dinesh 
+Aporva
+Prathmesh
+Bhakti
+Girija
+cbkpc@ubuntru22:~/d1$ grep "Bhakti" sample1
+Bhakti
+Bhakti
+Bhakti
+Bhakti
+cbkpc@ubuntru22:~/d1$ ^C
+cbkpc@ubuntru22:~/d1$ 
+
+
